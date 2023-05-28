@@ -1,0 +1,302 @@
+{
+  "workbench.colorTheme": "Default Dark Modern",
+  "editor.inlineSuggest.enabled": true,
+  "workbench.list.automaticKeyboardNavigation": false,
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC", // 这里输入你刚刚获得的英文输入法名称
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+  "vim.leader": "<space>",
+  // 启用easymotion插件
+  "vim.easymotion": true,
+  // 启用系统粘贴板作为vim寄存器
+  "vim.useSystemClipboard": true,
+  // 由vim接管ctrl+any的按键，而不是vscode
+  "vim.useCtrlKeys": true,
+  // 突出显示与当前搜索匹配的所有文本
+  "vim.hlsearch": true,
+  // vim基础3种模式对应的颜色
+  "vim.statusBarColors.normal": "#61d6af5d",
+  "vim.statusBarColors.insert": "#c75d9b52",
+  "vim.statusBarColors.visual": "#5168b35e",
+  "vim.statusBarColorControl": true,
+  // vim折叠代码防止自动展开
+  "vim.foldfix": true,
+  // 工作区自定义颜色，这里复制一下就可以了，不同vim模式下面的值是会跟着上面设置的自动改变的
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#61d6af5d",
+    "statusBar.noFolderBackground": "#61d6af5d",
+    "statusBar.debuggingBackground": "#61d6af5d",
+    "statusBar.foreground": "#fff"
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // 拆分一个上下分屏
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
+    },
+    // 拆分一个左右分屏
+    {
+      "before": [
+        "<leader>",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "<leader",
+        "n",
+        "l"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save"
+      ]
+    },
+    { // easymotion 全屏查找字符串
+      "before": [
+        "s",
+        "s"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "s"
+      ]
+    },
+    {
+      "before": [
+        "U",
+      ],
+      "after": [
+        "<C-r>"
+      ]
+    },
+    {
+      "before": [
+        "w",
+        "q"
+      ],
+      "commands": [
+        ":wq"
+      ]
+    },
+    {
+      "before": [
+        "z",
+        "z",
+      ],
+      "commands": [
+        "editor.toggleFold"
+      ]
+    },
+    {
+      "before": [
+        "["   
+      ],
+      "commands": [
+          "editor.action.jumpToBracket",
+      ]
+    },
+    {
+      "before": [
+        "]"   
+      ],
+      "commands": [
+          "editor.action.jumpToBracket",
+      ]
+    },
+    // {
+      // "before": [
+        // "[",
+        // "[",
+      // ],
+      // "commands": [
+        // "editor.action.marker.prevInFiles"
+      // ]
+    // },
+    // {
+      // "before": [
+        // "]",
+        // "]",
+      // ],
+      // "commands": [
+        // "editor.action.marker.nextInFiles"
+      // ]
+    // },
+    // 打开文件
+    {
+      "before": [
+        "<leader>",
+        "o",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.files.openFileFolder"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "l"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    { // 屏幕『向上』移动一页
+      "before": [
+        "{"
+      ],
+      "after": [
+        "<C-b>"
+      ]
+    },
+    { // 屏幕『向下』移动一页 
+      "before": [
+        "}"
+      ],
+      "after": [
+        "<C-f>"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "u"
+      ],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    // {
+      // "before": [
+        // "g",
+        // "i"
+      // ],
+      // "commands": [
+        // "g","d"
+      // ]
+    // },
+
+  ],
+  // 插入模式下的非递归按键绑定
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+  ],
+  // 命令模式下的非递归按键绑定
+  "vim.commandLineModeKeyBindingsNonRecursive": [],
+  // 可视模式下的非递归按键绑定
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": [
+        "v"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+  ],
+  "vim.handleKeys": {
+    "<C-a>": true,
+    "<C-f>": false,
+    // VS Code new marker @ next occurence
+    "<C-d>": true,
+    // Copy
+    "<C-c>": true,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    "<C-z>": false,
+    "<C-y>": false,
+    "<C-o>": true,
+  },
+  "switcher.findSuffixOrder": [
+    ".cpp",
+    ".cc",
+    ".c",
+    ".h",
+    ".hpp",
+    ".hxx",
+  ],
+  "explorer.confirmDelete": false
+}
